@@ -20,7 +20,7 @@ pretrained_path = r'/content/drive/MyDrive/BP_for_energy_predict/model/BP.pth'
 save_path = r'/content/drive/MyDrive/Colab Notebooks/BP_for_energy_predict/model'
 effect_path = r'runs/effect.json'
 
-learning_rate = 100
+learning_rate = 10
 gamma = 0.9
 weight_decay = 1e-8
 epochs = 100
