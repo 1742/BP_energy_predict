@@ -20,7 +20,8 @@ pretrained_path = r'C:\Users\13632\Documents\Python_Scripts\研发部机器学�
 save_path = r'C:\Users\13632\Documents\Python_Scripts\研发部机器学习\4.23题目\model'
 effect_path = r'runs/effect.json'
 
-learning_rate = 10
+learning_rate = 100
+gamma = 0.9
 weight_decay = 1e-8
 epochs = 100
 batch_size = 16
@@ -81,7 +82,7 @@ def train(
     if criterion_name == 'BCELoss':
         criterion = nn.BCELoss()
     elif criterion_name == 'MSELoss' or criterion_name == 'MSE':
-        criterion = nn.MSELoss()
+        criterion = nn.MSELoss(reduction='mean')
 
     if lr_schedule is None:
         lr_schedule = torch.optim.lr_scheduler.ExponentialLR(optimizer, gamma=1)
@@ -200,7 +201,7 @@ if __name__ == '__main__':
     optimizer = 'Adam'
     # criterion = 'BCELoss'
     criterion = 'MSELoss'
-    lr_schedule = {'name': 'ExponentialLR', 'gamma': 0.99}
+    lr_schedule = {'name': 'ExponentialLR', 'gamma': gamma}
     print('loss:', criterion)
     print('optimizer:', optimizer)
     print('lr_schedule:', lr_schedule)
