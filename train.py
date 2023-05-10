@@ -20,7 +20,7 @@ pretrained_path = r'C:\Users\13632\Documents\Python_Scripts\研发部机器学�
 save_path = r'C:\Users\13632\Documents\Python_Scripts\研发部机器学习\4.23题目\model'
 effect_path = r'runs/effect.json'
 
-learning_rate = 1e-3
+learning_rate = 10
 weight_decay = 1e-8
 epochs = 100
 batch_size = 16

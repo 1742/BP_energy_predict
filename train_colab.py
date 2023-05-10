@@ -15,12 +15,12 @@ from tqdm import tqdm
 from tools.evaluation_index import R_square, Visualization
 
 
-data_path = r'/content/drive/MyDrive/4.23题目/data'
-pretrained_path = r'/content/drive/MyDrive/4.23题目/model/BP.pth'
-save_path = r'/content/drive/MyDrive/4.23题目/model'
+data_path = r'/content/BP_energy_predict/data'
+pretrained_path = r'/content/drive/MyDrive/BP_for_energy_predict/model/BP.pth'
+save_path = r'/content/drive/MyDrive/Colab Notebooks/BP_for_energy_predict/model'
 effect_path = r'runs/effect.json'
 
-learning_rate = 1e-3
+learning_rate = 10
 weight_decay = 1e-8
 epochs = 100
 batch_size = 16
